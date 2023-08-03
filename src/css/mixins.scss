@@ -1,0 +1,56 @@
+//Media Query Manager
+
+/*
+0px - 600px     - Phone [this project's noraml styles are for this size] (Mobile first approach)
+600px - 900px   - Tablet Portrait
+900px - 1200px  - Tablet landscape
+1200px - 1800px - Standard Desktop
+1800px+         - Big Desktop
+*/
+
+@mixin respond-tab-portrait {
+  @media (min-width: 601px) {
+    @content;
+  }
+}
+/* above mixin can be used as -
+@include respond-tab-portrait {
+  font-size: 10px;
+}
+*/
+
+/*
+$breakpoint argument choices:
+- phone
+- tab-portrait
+- tab-landscape
+- std-desktop (standard desktop)
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == tab-portrait) {
+    @media (min-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if ($breakpoint == tab-landscape) {
+    @media (min-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if ($breakpoint == std-desktop) {
+    @media (min-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+  @if ($breakpoint == big-desktop) {
+    @media (min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+}

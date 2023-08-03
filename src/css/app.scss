@@ -1,0 +1,35 @@
+// app global css in SCSS form
+//my palette - primary:e94560, dark:292727, light:faedf0
+@import "./mixins.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Acme", sans-serif;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-portrait) {
+    font-size: 67%;
+  }
+  @include respond(tab-landscape) {
+    font-size: 70%;
+  }
+  @include respond(std-desktop) {
+    font-size: 73%;
+  }
+  @include respond(big-desktop) {
+    font-size: 80%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $dark-page;
+  color: $secondary;
+}
