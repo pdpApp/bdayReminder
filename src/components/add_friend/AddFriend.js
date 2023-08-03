@@ -18,7 +18,6 @@ export default defineComponent({
     function addFriend() {
       console.log(friendName.value);
       console.log(friendBirthdate.value);
-      console.log(group.value);
       console.log(reminderDays.value);
     }
 
