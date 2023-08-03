@@ -20,6 +20,7 @@ export default defineComponent({
       console.log(friendBirthdate.value);
       console.log(group.value);
       console.log(reminderDays.value);
+      console.log("adding this line for checking pull request thing");
     }
 
     return {
