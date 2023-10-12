@@ -7,8 +7,8 @@
       color="primary"
       width="100px"
       label-color="secondary"
-      v-model="friendName"
-      label="Name"
+      v-model.trim="friendName"
+      label="Friend's  Name"
     />
     <q-input
       dark
@@ -16,7 +16,7 @@
       v-model="friendBirthdate"
       filled
       type="date"
-      label="Birth date"
+      label="Friend's Birth date"
       stack-label
       class="q-mt-lg"
     />
@@ -49,8 +49,8 @@
       class="q-mt-xl m-btn"
       color="accent"
       size="18px"
-      label="Add details"
-      @click="addFriend()"
+      label="Make Reminder"
+      @click="addFriendAndMakeReminder()"
     />
   </div>
 </template>

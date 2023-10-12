@@ -15,7 +15,7 @@ export default defineComponent({
       { label: "1 month prior", value: "4" },
     ];
     const group = ref([]);
-    function addFriend() {
+    function addFriendAndMakeReminder() {
       console.log(friendName.value);
       console.log(friendBirthdate.value);
       console.log(group.value);
@@ -30,7 +30,7 @@ export default defineComponent({
       reminderDays,
       group,
       options,
-      addFriend,
+      addFriendAndMakeReminder,
     };
   },
 });
